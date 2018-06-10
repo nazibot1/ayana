@@ -33,7 +33,7 @@ bot.on("message", message => {
 })
 
 bot.on("guildMemberAdd", MemberAdd => {
-	MemberAdd.guild.channel.user("name", "general").send("Bienvenu dans ma taverne mon chou :heart:.")
+	MemberAdd.guild.channel.get("name", "general").send("Bienvenu dans ma taverne mon chou :heart:.")
 	console.log("enter");
 });
 
