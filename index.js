@@ -33,12 +33,12 @@ bot.on("message", message => {
 })
 
 bot.on("guildMemberAdd", MemberAdd => {
-	MemberAdd.guild.channel.user("name", "general").send("Bienvenu dans ma taverne mon chou :heart:.")
+	MemberAdd.guild.channels.find("name", "general").send("Bienvenu dans ma taverne mon chou :heart:.")
 	console.log("enter");
 });
 
 bot.on("guildMemberRemove", MemberLeave => {
-	MemberLeave.guild.channel.get("name", "general").send("Je suis désolée que tu partes... Tu étais choupi :cry:")
+	MemberLeave.guild.channels.find("name", "general").send("Je suis désolée que tu partes... Tu étais choupi :cry:")
 	console.log("enter");
 });
 
